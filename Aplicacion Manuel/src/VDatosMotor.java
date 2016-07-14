@@ -6,6 +6,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 
 @SuppressWarnings("serial")
@@ -77,8 +79,8 @@ public class VDatosMotor extends JFrame {
 		contentPane.add(lumbrePpal);
 		lumbrePpal.setColumns(10);
 
-		lblAreaLumbrePrincipal = new JLabel("Area Lumbre Principal");
-		lblAreaLumbrePrincipal.setBounds(318, 47, 105, 14);
+		lblAreaLumbrePrincipal = new JLabel("Area Lumbrera Principal");
+		lblAreaLumbrePrincipal.setBounds(318, 47, 129, 14);
 		contentPane.add(lblAreaLumbrePrincipal);
 
 		escapeAux = new JTextField();
@@ -100,11 +102,11 @@ public class VDatosMotor extends JFrame {
 		lumbreraEscape.setColumns(10);
 
 		lblAnguloDeGrados = new JLabel("Angulo de Grados de Carga");
-		lblAnguloDeGrados.setBounds(10, 211, 151, 14);
+		lblAnguloDeGrados.setBounds(318, 215, 151, 14);
 		contentPane.add(lblAnguloDeGrados);
 
 		textField_1 = new JTextField();
-		textField_1.setBounds(10, 234, 86, 20);
+		textField_1.setBounds(318, 238, 86, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
@@ -113,6 +115,10 @@ public class VDatosMotor extends JFrame {
 		contentPane.add(button);
 		
 		JButton btnCalcular = new JButton("Calcular");
+		btnCalcular.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		btnCalcular.setBounds(318, 300, 89, 23);
 		contentPane.add(btnCalcular);
 	}
